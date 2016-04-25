@@ -5,3 +5,13 @@ locationDistanceDsl.parent/gradlew
 locationDistanceDsl.parent/gradlew.bat
 locationDistanceDsl.parent/locationDistanceDsl.idea/src/main
 locationDistanceDsl.parent/locationDistanceDsl.ide/src/main
+
+# all generated java files
+**/*.java
+
+# generated xtext files
+**/*.g 
+**/*.tokens
+**/*.ecore
+**/*.xtextbin
+**/*.genmodel
