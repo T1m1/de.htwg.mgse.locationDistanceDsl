@@ -1,0 +1,9 @@
+grammar de.htwg.konstanz.mgse.LocationDistanceDsl with org.eclipse.xtext.common.Terminals
+
+generate locationDistanceDsl "http://www.htwg.de/konstanz/mgse/LocationDistanceDsl"
+
+Model:
+	greetings+=Greeting*;
+	
+Greeting:
+	'Hello' name=ID '!';
