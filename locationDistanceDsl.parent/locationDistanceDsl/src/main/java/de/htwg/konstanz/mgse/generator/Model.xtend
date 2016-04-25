@@ -14,6 +14,39 @@ class Model {
 
 	}
 
+	def modelTrip() {
+		val Map<String, String> fields = new HashMap<String, String>();
+		fields.put("name", "String");
+
+		return '''
+			package «land.toFirstLower».model;
+
+			import java.util.List;
+			import java.util.LinkedList;
+
+			public class Trip{
+
+				«bean("Trip", fields, "this.locations = new LinkedList<Location>();")»
+
+				private List<Location> locations;
+
+				public void addLocation(Location l) {
+					locations.add(l);
+				}
+
+				public List<Location> getLocations() {
+					return locations;
+				}
+
+				@Override
+				public String toString() {
+				    return this.name;
+				}
+
+			}
+		'''
+	}
+	
 	def modelLocation() {
 		val Map<String, String> fields = new HashMap<String, String>();
 		fields.put("name", "String");
