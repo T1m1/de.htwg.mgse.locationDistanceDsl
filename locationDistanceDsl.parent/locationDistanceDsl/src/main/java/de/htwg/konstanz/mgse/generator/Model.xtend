@@ -46,7 +46,7 @@ class Model {
 			}
 		'''
 	}
-	
+
 	def modelLocation() {
 		val Map<String, String> fields = new HashMap<String, String>();
 		fields.put("name", "String");
