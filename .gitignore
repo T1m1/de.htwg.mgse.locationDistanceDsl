@@ -8,6 +8,7 @@ locationDistanceDsl.parent/locationDistanceDsl.ide/src/main
 
 # all generated java files
 **/*.java
+**/*.java_trace
 
 # generated xtext files
 **/*.g 
