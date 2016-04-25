@@ -14,7 +14,17 @@ import de.htwg.konstanz.mgse.locationDistanceDsl.Geokoordinaten
 
 class LocationDistanceDslGenerator extends AbstractGenerator {
 
+	var Land land
+
 	override void doGenerate(Resource resource, IFileSystemAccess2 fsa, IGeneratorContext context) {
+		land = resource.contents.filter(typeof(Land)).head
+
+		generateModel(fsa)
+
+		// todo generate land klass
+	}
+
+	def generateModel(IFileSystemAccess2 fsa) {
 
 	}
 }
