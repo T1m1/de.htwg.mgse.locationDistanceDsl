@@ -14,6 +14,27 @@ class Model {
 
 	}
 
+	def modelLocation() {
+		val Map<String, String> fields = new HashMap<String, String>();
+		fields.put("name", "String");
+		fields.put("geokoordinaten","Geokoordinaten");
+
+		return '''
+			package «land.toFirstLower».model;
+
+			public class Location {
+
+				«bean("Location", fields, "")»
+
+
+				@Override
+				public String toString() {
+				    return this.name;
+				}
+			}
+		'''
+	}
+
 	def modelGeokoordinaten() {
 		val Map<String, String> fields = new HashMap<String, String>();
 		fields.put("name", "String");
