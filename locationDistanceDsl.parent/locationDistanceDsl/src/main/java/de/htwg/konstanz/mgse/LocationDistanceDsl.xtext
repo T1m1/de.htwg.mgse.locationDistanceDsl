@@ -2,8 +2,13 @@ grammar de.htwg.konstanz.mgse.LocationDistanceDsl with org.eclipse.xtext.common.
 
 generate locationDistanceDsl "http://www.htwg.de/konstanz/mgse/LocationDistanceDsl"
 
-Model:
-	greetings+=Greeting*;
-	
-Greeting:
-	'Hello' name=ID '!';
+Land: 'Land ' name=ID trips+=Trip+ ';' ;
+
+Trip: 'Trip' name=ID locations+=Location+;
+
+Location: 'Location' name=ID 'mit' geokoordinaten=Geokoordinaten;
+
+terminal DOUBLE:
+	'-'? INT? '.' INT;
+
+Geokoordinaten: 'Geokoordinaten' name=ID '('x=DOUBLE','y=DOUBLE')';
