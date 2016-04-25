@@ -86,6 +86,10 @@ class LocationDistanceDslGenerator extends AbstractGenerator {
     '''
 
 	def generateModel(IFileSystemAccess2 fsa) {
+		val modelGen = new Model(land.name);
 
+		fsa.generateFile(land.name.toFirstLower + "\\model\\Location.java", modelGen.modelLocation)
+		fsa.generateFile(land.name.toFirstLower + "\\model\\Trip.java", modelGen.modelTrip)
+		fsa.generateFile(land.name.toFirstLower + "\\model\\Geokoordinaten.java", modelGen.modelGeokoordinaten)
 	}
 }
