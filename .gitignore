@@ -7,6 +7,7 @@ locationDistanceDsl.parent/locationDistanceDsl.idea/src/main
 locationDistanceDsl.parent/locationDistanceDsl.ide/src/main
 locationDistanceDsl.parent/locationDistanceDsl.ide/build/
 locationDistanceDsl.parent/locationDistanceDsl/build/
+locationDistanceDsl.parent/locationDistanceDsl.idea/build/
 
 # all generated java files
 **/*.java
